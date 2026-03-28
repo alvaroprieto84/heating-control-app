@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1A1A2E"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <!-- App Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Heating Control"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send command to heating unit"
+        android:textSize="14sp"
+        android:textColor="#AAAACC"
+        android:gravity="center"
+        android:layout_marginBottom="48dp" />
+
+    <!-- Control Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="40dp">
+
+        <!-- ON Button -->
+        <Button
+            android:id="@+id/btnOn"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="ON"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2E7D32"
+            android:elevation="6dp"
+            android:stateListAnimator="@null" />
+
+        <!-- OFF Button -->
+        <Button
+            android:id="@+id/btnOff"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="OFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#C62828"
+            android:elevation="6dp"
+            android:stateListAnimator="@null" />
+
+        <!-- STATUS Button -->
+        <Button
+            android:id="@+id/btnStatus"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="STATUS"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#546E7A"
+            android:elevation="6dp"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#333355"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Response Display Label -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unit Response"
+        android:textSize="13sp"
+        android:textColor="#AAAACC"
+        android:layout_marginBottom="8dp"
+        android:letterSpacing="0.1" />
+
+    <!-- Status Display Box -->
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        android:padding="16dp"
+        android:text="No response yet"
+        android:textSize="16sp"
+        android:textColor="#E0E0FF"
+        android:background="@drawable/status_box_background"
+        android:fontFamily="monospace"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="top" />
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#333355"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Phone Number Label -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Target Phone Number"
+        android:textSize="13sp"
+        android:textColor="#AAAACC"
+        android:layout_marginBottom="8dp"
+        android:letterSpacing="0.1" />
+
+    <!-- Phone Number Input -->
+    <EditText
+        android:id="@+id/editPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:hint="+1234567890"
+        android:inputType="phone"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#666688"
+        android:background="@drawable/input_background"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:maxLines="1"
+        android:imeOptions="actionDone" />
+
+</LinearLayout>
